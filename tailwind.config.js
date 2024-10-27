@@ -7,9 +7,17 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontSize: {},
+      fontFamily: {
+        satoshi: ["satoshi", "sans-serif"],
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        white: "#fff",
+        green: "#2e9546",
+        yellow: "#eec419",
+        red: "##C52127",
+        orange: "#ea9023",
+        blue: "#20b3ad",
       },
     },
   },
