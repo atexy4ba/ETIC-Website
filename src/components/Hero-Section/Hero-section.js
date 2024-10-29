@@ -9,9 +9,6 @@ export default function HeroSection() {
             <p className="font-satoshi  text-black font-normal text-lg block p-6">ETIC Club est le premier club étudiant dédié à l’entrepreneuriat,<br/> l’innovation et aux nouvelles technologies.</p>
             <h2 className="p-10 font-satoshi text-2xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-bold">SINCE 2009</h2>
             </div>
-
-          
-
         </div>
     </section>
     ) 
