@@ -5,24 +5,18 @@ import Link from "next/link";
 import { useState } from "react";
 import ETIC from "../../../public/etic.svg";
 import { ContactButton } from "./ContactButton";
-import {usePathname, useRouter} from "next/router";
+import { useRouter } from "next/router";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const router = useRouter();
-
-
-
-
-
-
   return (
-    <div className="w-full px-4">
-      <div className="overflow-x-clip relative text-base  text-black mx-auto w-full flex justify-between items-center bg-white rounded-full py-[14px] px-8 m-4 max-w-[1000px] max-md:bg-inherit transition duration-100 ">
-        <Image src={ETIC} className="w-[50px] max-md:hidden" alt="" />
+    <div className="w-full px-4 sticky top-4">
+      <div className="relative text-base  text-black mx-auto w-full flex justify-between items-center bg-white rounded-full py-[14px] px-8 m-4 max-w-[1000px] max-md:bg-inherit transition duration-100 shadowNav">
+        <Image src={ETIC} className="w-[50px] max-sm:hidden" alt="" />
 
-        <div className="md:hidden z-[2] size-[50px] relative">
+        <div className="sm:hidden z-[2] size-[50px] relative">
           <Image
             src={ETIC}
             className={
@@ -46,19 +40,26 @@ export const Navbar = () => {
         {/* Desktop Navbar */}
         <nav className="max-sm:hidden font-medium max-lg:text-sm">
           <ul className="flex items-center gap-6 max-lg:gap-4 ">
-            {
-              links.map((link) => {
-                const selected = link.url === router.asPath
-                return (
-
-                  <li key={link.name} style={{ fontWeight: selected? "600" :"500" }} className="group relative" >
-                    <Link href={link.url} >{link.name}</Link>
-                    <div className={"absolute w-0 h-[1px] rounded-full top-full bg-black group-hover:w-full duration-300  "} style={{
-                      width: selected?"100%":null
-                    }}/>
-                  </li>
-              )})
-            }
+            {links.map((link) => {
+              const selected = link.url === router.asPath;
+              return (
+                <li
+                  key={link.name}
+                  style={{ fontWeight: selected ? "600" : "500" }}
+                  className="group relative"
+                >
+                  <Link href={link.url}>{link.name}</Link>
+                  <div
+                    className={
+                      "absolute w-0 h-[1px] rounded-full top-full bg-black group-hover:w-full duration-300  "
+                    }
+                    style={{
+                      width: selected ? "100%" : null,
+                    }}
+                  />
+                </li>
+              );
+            })}
           </ul>
         </nav>
         {/*Mobile Navbar*/}
@@ -68,9 +69,7 @@ export const Navbar = () => {
         >
           Menu
         </button>
-        <AnimatePresence>
-          {isOpen && <MobileNav />}
-        </AnimatePresence>
+        <AnimatePresence>{isOpen && <MobileNav />}</AnimatePresence>
 
         <ContactButton />
       </div>
@@ -98,34 +97,35 @@ export const MobileNav = () => {
           width: { duration: 0.4 },
           height: { duration: 0.6, delay: 0.4, ease: easeIn },
         }}
-        className="menu text-white  absolute top-0 right-0 bg-black w-full   z-[0] sm:hidden overflow-clip rounded-2xl px-4"
+        className=" text-white  absolute top-0 right-0 bg-black w-full   z-[0] sm:hidden overflow-clip rounded-2xl px-4"
       >
         <nav className="mt-20 font-medium">
           <ul className=" flex flex-col p-4  gap-6 max-lg:gap-4">
-            {
-              links.map((link) =>
-              {
-                const selected = link.url === router.asPath
-              return(
-
-                  <li key={link.name} style={{fontWeight: selected ? "600" : "500"}} className="group relative w-fit ">
-                    <Link href={link.url}>{link.name}</Link>
-                    <div
-                        className={"absolute w-0 h-[1px] rounded-full top-full bg-white group-hover:w-full duration-300  "}
-                        style={{
-                          width: selected ? "100%" : null
-                        }}/>
-                  </li>
-              )
-              }
-              )
-            }
-
+            {links.map((link) => {
+              const selected = link.url === router.asPath;
+              return (
+                <li
+                  key={link.name}
+                  style={{ fontWeight: selected ? "600" : "500" }}
+                  className="group relative w-fit "
+                >
+                  <Link href={link.url}>{link.name}</Link>
+                  <div
+                    className={
+                      "absolute w-0 h-[1px] rounded-full top-full bg-white group-hover:w-full duration-300  "
+                    }
+                    style={{
+                      width: selected ? "100%" : null,
+                    }}
+                  />
+                </li>
+              );
+            })}
           </ul>
         </nav>
         <div className="grid grid-cols-2 gap-4 p-4 pb-6 mt-4">
           <div className="flex items-center gap-2">
-            <Image src={"/facebook.svg"} alt="X" height={20} width={20}/>
+            <Image src={"/facebook.svg"} alt="X" height={20} width={20} />
             <p>Facebook</p>
           </div>
 
@@ -147,31 +147,30 @@ export const MobileNav = () => {
   );
 };
 
-
 export const links = [
   {
-    "name":"Accueil",
-    "url":"/"
+    name: "Accueil",
+    url: "/",
   },
   {
-    "name": "À propos",
-    "url": "/#apropos"
+    name: "À propos",
+    url: "/#apropos",
   },
 
   {
-    "name": "Nos Projets",
-    "url": "/#nosprojets"
+    name: "Nos Projets",
+    url: "/#nosprojets",
   },
   {
-    "name": "Articles",
-    "url": "/#articles"
+    name: "Articles",
+    url: "/#articles",
   },
   {
-    "name": "Nos Évenements",
-    "url": "/#noseevenements"
+    name: "Nos Évenements",
+    url: "/#noseevenements",
   },
   {
-    "name": "Contact",
-    "url": "/#contact"
-  }
-]
+    name: "Contact",
+    url: "/#contact",
+  },
+];
