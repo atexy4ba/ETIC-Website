@@ -1,5 +1,6 @@
 import Image from "next/image";
 import localFont from "next/font/local";
+import { Navbar } from "@/components/Navbar/Navbar";
 import Herosection from "@/components/Hero-Section/Hero-section"; 
 import Titresection from "@/components/Titre-section/Titre-section";
 
@@ -11,7 +12,9 @@ import Titresection from "@/components/Titre-section/Titre-section";
 
 export default function Home() {
   return (
-    <div>
+
+    <div className="font-satoshi font-bold text-8xl ">
+      <Navbar/>
       <Herosection/>
     </div> 
   );
