@@ -1,11 +1,28 @@
 import React from 'react';
 import Box from './Box';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import data from "./data.json";
 
 const Evenements = () => {
-
+  const settings = {
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 1,
+    speed: 500
+  };
   return (
-    <div>
-      <Box color={"#e2e2e2"} title={"Training Camp"} description={"Un bootcamp accéléré de 3 jours, centré sur les technologies modernes et l'entrepreneuriat. Destiné aux étudiants désireux d'acquérir ou renforcer leurs compétences, cet événement favorise la créativité, l’échange et le travail collaboratif, selon le principe du “Learning by Doing”."} src="/Evenements/training_camp.jpg"/>
+    <div className="slider-container">
+      <Slider {...settings}>
+        {data && data.map((event)=> (
+          <div key={event.id}>
+            <Box event={event}/>
+          </div>
+        ))}
+      </Slider>
     </div>
   );
 };
