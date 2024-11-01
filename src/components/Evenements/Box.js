@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaArrowRight } from "react-icons/fa6";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const Box = ({event}) => {
   return (
@@ -34,7 +34,7 @@ const Box = ({event}) => {
         <div className='w-full flex justify-end lg:justify-normal'>
         <button className="px-7 py-2 font-satoshi rounded-3xl flex items-center gap-3 text-white bg-[#212121]">
           En savoir plus
-          <FaArrowRight />
+          <FaArrowRightLong />
         </button>
         </div>
       </div>
