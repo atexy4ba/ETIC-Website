@@ -1,5 +1,6 @@
 import Image from "next/image";
 import localFont from "next/font/local";
+import Evenements from "@/components/Evenements/Evenements";
 import { Navbar } from "@/components/Navbar/Navbar";
 import Herosection from "@/components/Hero-Section/Hero-section";
 import Titresection from "@/components/Titre-section/Titre-section";
@@ -13,6 +14,8 @@ import Decouvrez from "@/components/Decouvrez-ETIC/Decouvrez-ETIC";
 
 export default function Home() {
   return (
+    // <div className="font-satoshi font-bold text-8xl uppercase">Bon courage</div>
+    <div>
     <div className="font-satoshi font-bold text-8xl flex flex-col px-9 gap-10 overflow-hidden">
       <Navbar />
       <Herosection />
@@ -25,6 +28,7 @@ export default function Home() {
         }
         color={"#269122FF"}
       />
+          <Evenements />
     </div>
   );
 }
