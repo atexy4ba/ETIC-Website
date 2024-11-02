@@ -1,15 +1,22 @@
-
-
-export default function HeroSection() {  
-    return ( 
-    <section > 
-        <div className="hero-container bg-white bg-opacity-100 flex flex-col"> 
-            <h1 className="font-satoshi text-5xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-8xl text-black font-bold p-6 mt-24"> WE ACT <br/> FOR <span className="text-blue">IMPACT</span><span className="font-serif">.</span></h1> 
-            <div className="flex flex-row justify-between">
-            <p className="font-satoshi  text-black font-normal text-lg block p-6">ETIC Club est le premier club étudiant dédié à l’entrepreneuriat,<br/> l’innovation et aux nouvelles technologies.</p>
-            <h2 className="p-10 font-satoshi text-2xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-bold">SINCE 2009</h2>
-            </div>
+export default function HeroSection() {
+  return (
+    <section>
+      <div className="hero-container bg-white bg-opacity-100 flex flex-col">
+        <h1 className="font-satoshi text-5xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-8xl text-black font-bold">
+          {" "}
+          WE ACT <br /> FOR <span className="text-blue">IMPACT</span>
+          <span className="font-serif">.</span>
+        </h1>
+        <div className="flex flex-row justify-between">
+          <p className="font-satoshi  text-black font-normal text-lg block">
+            ETIC Club est le premier club étudiant dédié à l’entrepreneuriat,
+            <br /> l’innovation et aux nouvelles technologies.
+          </p>
+          <h2 className="font-satoshi text-2xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-bold">
+            SINCE 2009
+          </h2>
         </div>
+      </div>
     </section>
-    ) 
+  );
 }

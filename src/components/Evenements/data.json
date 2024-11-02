@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "Training Camp",
+        "themes": "Formations - Technologies",
+        "description": "Un bootcamp accéléré de 3 jours, centré sur les technologies modernes et l'entrepreneuriat. Destiné aux étudiants désireux d'acquérir ou renforcer leurs compétences, cet événement favorise la créativité, l’échange et le travail collaboratif, selon le principe du “Learning by Doing”.",
+        "color": "#EB9223",
+        "img": "/Evenements/training_camp.jpg"
+    },
+    {
+        "id": 2,
+        "title": "AlgiersUP",
+        "themes": "Formations - Technologies",
+        "description": "Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description ",
+        "color": "#FFE600",
+        "img": "/Evenements/training_camp.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Salon de l’Emploi de l’ESI",
+        "themes": "Professionnel - Entreprises",
+        "description": "Un bootcamp accéléré de 3 jours, centré sur les technologies modernes et l'entrepreneuriat. Destiné aux étudiants désireux d'acquérir ou renforcer leurs compétences, cet événement favorise la créativité, l’échange et le travail collaboratif, selon le principe du “Learning by Doing”.",
+        "color": "#20B3AD",
+        "img": "/Evenements/training_camp.jpg"
+    }
+]

@@ -1,8 +1,10 @@
 import Image from "next/image";
 import localFont from "next/font/local";
+import Evenements from "@/components/Evenements/Evenements";
 import { Navbar } from "@/components/Navbar/Navbar";
 import Herosection from "@/components/Hero-Section/Hero-section";
 import Titresection from "@/components/Titre-section/Titre-section";
+import Decouvrez from "@/components/Decouvrez-ETIC/Decouvrez-ETIC";
 
 // const satoshiRegular = localFont({
 //   src: "./fonts/Satoshi-Regular.woff",
@@ -12,9 +14,21 @@ import Titresection from "@/components/Titre-section/Titre-section";
 
 export default function Home() {
   return (
-    <div className="font-satoshi font-bold text-8xl h-screen overflow-x-hidden relative">
+    // <div className="font-satoshi font-bold text-8xl uppercase">Bon courage</div>
+    <div>
+    <div className="font-satoshi font-bold text-8xl flex flex-col px-9 gap-10 overflow-hidden">
       <Navbar />
       <Herosection />
+      <Decouvrez />
+      <Titresection
+        h1={"Ils nous ont fait"}
+        span={"confiance"}
+        p={
+          "ETIC bénéficie du soutien de nombreux partenaires de renom, qui contribuent à renforcer ses actions en rapprochant les étudiants du monde professionnel. Grâce à ces collaborations, ETIC offre aux étudiants un accès privilégié à des opportunités et des rencontres enrichissantes pour leur avenir."
+        }
+        color={"#269122FF"}
+      />
+          <Evenements />
     </div>
   );
 }
