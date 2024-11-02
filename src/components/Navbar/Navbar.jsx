@@ -13,7 +13,7 @@ export const Navbar = () => {
   const router = useRouter();
   return (
     <div className="w-full px-4 sticky top-4">
-      <div className="relative text-base  text-black mx-auto w-full flex justify-between items-center bg-white rounded-full py-[14px] px-8 m-4 max-w-[1000px] max-md:bg-inherit transition duration-100 shadowNav">
+      <div className="relative text-base  text-black mx-auto w-full flex justify-between items-center bg-white rounded-full py-[14px] px-8 m-4 max-w-[1000px] max-md:bg-inherit transition duration-100 ">
         <Image src={ETIC} className="w-[50px] max-sm:hidden" alt="" />
 
         <div className="sm:hidden z-[2] size-[50px] relative">
