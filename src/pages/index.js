@@ -15,20 +15,19 @@ import Decouvrez from "@/components/Decouvrez-ETIC/Decouvrez-ETIC";
 export default function Home() {
   return (
     // <div className="font-satoshi font-bold text-8xl uppercase">Bon courage</div>
-    <div>
     <div className="font-satoshi font-bold text-8xl flex flex-col px-9 gap-10 overflow-hidden">
       <Navbar />
       <Herosection />
       <Decouvrez />
       <Titresection
-        h1={"Ils nous ont fait"}
-        span={"confiance"}
+        h1={"Explorez nos"}
+        span={"événements"}
         p={
-          "ETIC bénéficie du soutien de nombreux partenaires de renom, qui contribuent à renforcer ses actions en rapprochant les étudiants du monde professionnel. Grâce à ces collaborations, ETIC offre aux étudiants un accès privilégié à des opportunités et des rencontres enrichissantes pour leur avenir."
+          "ETIC organise une variété d'événements tels que des conférences, des ateliers et des rencontres avec des professionnels de divers secteurs. Ces initiatives visent à enrichir les connaissances des étudiants, à développer leurs compétences pratiques et à les préparer aux exigences du marché du travail."
         }
-        color={"#269122FF"}
+        color={"#EB9223"}
       />
-          <Evenements />
+      <Evenements />
     </div>
   );
 }
