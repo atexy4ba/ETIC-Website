@@ -32,21 +32,38 @@ const Evenements = () => {
           </div>
         ))}
       </Slider>
-      <div className='ml-10 m-5 flex lg:justify-start justify-between items-center gap-16'>
-      <div className="flex justify-start gap-2">
-        <button
-          onClick={() => sliderRef.current.slickPrev()}
-          className={`border lg:px-6 lg:py-6 px-4 py-4 rounded-full shadow-md focus:outline-none 
-            ${currentSlide === 0 ? "bg-black text-white" : "bg-white text-black border-white"}`}
-        >
-          <FaArrowLeftLong />
-        </button>
-        <button
-          onClick={() => sliderRef.current.slickNext()}
-          className={`border lg:px-6 lg:py-6 px-4 py-4 rounded-full shadow-md focus:outline-none
-            ${currentSlide === totalSlides - 1 ? "bg-black text-white" : "bg-white text-black border-white"}`}        >
-          <FaArrowRightLong />
-        </button>
+      <div className="ml-10 m-5 flex lg:justify-start justify-between items-center gap-16">
+        <div className="flex justify-start gap-2">
+          <button
+            onClick={() => sliderRef.current.slickPrev()}
+            className={`border p-3 sm:p-6 rounded-full shadow-md focus:outline-none  
+            ${
+              currentSlide === 0
+                ? "bg-black text-white"
+                : "bg-white text-black border-white"
+            }`}
+          >
+            <FaArrowLeftLong size={"10px"} />
+          </button>
+          <button
+            onClick={() => sliderRef.current.slickNext()}
+            className={`border p-3 sm:p-6 rounded-full shadow-md focus:outline-none
+            ${
+              currentSlide === totalSlides - 1
+                ? "bg-black text-white"
+                : "bg-white text-black border-white"
+            }`}
+          >
+            <FaArrowRightLong size={"10px"} />
+          </button>
+        </div>
+
+        <div className="lg:w-1/3 mr-5 w-2/3 lg:h-1.5 h-1 bg-[#484848] rounded-md overflow-hidden">
+          <div
+            className="h-full transition-all bg-white rounded-r-md"
+            style={{ width: `${progress}%` }}
+          ></div>
+        </div>
       </div>
 
       <div className="lg:w-1/3 mr-5 w-2/3 lg:h-1.5 h-1 bg-[#484848] rounded-md overflow-hidden">
@@ -55,7 +72,6 @@ const Evenements = () => {
         style={{ width: `${progress}%` }}
       ></div>
       </div>
-    </div>
     </div>
   );
 };
