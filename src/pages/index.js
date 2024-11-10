@@ -15,7 +15,6 @@ import Decouvrez from "@/components/Decouvrez-ETIC/Decouvrez-ETIC";
 export default function Home() {
   return (
     // <div className="font-satoshi font-bold text-8xl uppercase">Bon courage</div>
-    <div>
     <div className="font-satoshi font-bold text-8xl flex flex-col px-9 gap-10 overflow-hidden">
       <Navbar />
       <Herosection />

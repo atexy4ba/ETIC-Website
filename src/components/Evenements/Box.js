@@ -33,12 +33,12 @@ const Box = ({event}) => {
           <h1 className="font-satoshi font-bold text-5xl text-[#212121] mb-2 hidden lg:block">
             {event.title}
           </h1>
-          <p className="font-satoshi text-md lg:text-xl leading-6 lg:leading-10 mb-5 lg:mb-0 text-[#212121] lg:pr-12">
+          <p className="font-satoshi text-base font-normal lg:text-xl leading-6 lg:leading-10 mb-5 lg:mb-0 text-[#212121] lg:pr-12">
             {event.description}
           </p>
         </div>
         <div className='w-full flex justify-end lg:justify-normal'>
-        <button className="px-7 py-2 font-satoshi rounded-3xl flex items-center gap-3 text-white bg-[#212121]">
+        <button className="px-7 py-2 font-satoshi font-medium text-sm sm:text-lg rounded-3xl flex items-center gap-3 text-white bg-[#212121]">
           En savoir plus
           <FaArrowRightLong />
         </button>

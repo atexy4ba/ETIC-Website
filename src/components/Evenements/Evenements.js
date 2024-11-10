@@ -65,13 +65,6 @@ const Evenements = () => {
           ></div>
         </div>
       </div>
-
-      <div className="lg:w-1/3 mr-5 w-2/3 lg:h-1.5 h-1 bg-[#484848] rounded-md overflow-hidden">
-      <div
-        className="h-full transition-all bg-white rounded-r-md"
-        style={{ width: `${progress}%` }}
-      ></div>
-      </div>
     </div>
   );
 };
