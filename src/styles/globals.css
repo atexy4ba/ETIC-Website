@@ -27,3 +27,150 @@
   -webkit-box-shadow: 0px 1px 10px 1px rgba(217, 217, 217, 0.63);
   -moz-box-shadow: 0px 1px 10px 1px rgba(217, 217, 217, 0.63);
 }
+
+.wrapper {
+  width: 100%;
+  max-width: 1536px;
+  margin-inline: auto;
+  position: relative;
+  height: 100px;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+@keyframes scrollLeft {
+  to {
+    left: -100px;
+  }
+}
+
+@keyframes scrollRight {
+  to {
+    right: -100px;
+  }
+}
+
+.logoLeft,
+.logoRight {
+  width: 100px;
+  height: 100px;
+  border-radius: 6px;
+  position: absolute;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.logoLeft {
+  left: max(calc(100px * 8), 100%);
+  animation-name: scrollLeft;
+}
+
+.logoRight {
+  right: max(calc(100px * 6), 100%);
+  animation-name: scrollRight;
+}
+
+[data-group="1"] .logo:nth-child(1) {
+  animation-delay: calc(30s / 8 * -1);
+  background-image: url("/confiance/deloitte.png");
+}
+[data-group="1"] .logo:nth-child(2) {
+  animation-delay: calc(30s / 8 * -2);
+  background-image: url("/confiance/ooredoo.png");
+}
+[data-group="1"] .logo:nth-child(3) {
+  animation-delay: calc(30s / 8 * -3);
+  background-image: url("/confiance/djezzy.png");
+  background-size: 50%;
+}
+[data-group="1"] .logo:nth-child(4) {
+  animation-delay: calc(30s / 8 * -4);
+  background-image: url("/confiance/yassir.png");
+}
+[data-group="1"] .logo:nth-child(5) {
+  animation-delay: calc(30s / 8 * -5);
+  background-image: url("/confiance/deloitte.png");
+}
+[data-group="1"] .logo:nth-child(6) {
+  animation-delay: calc(30s / 8 * -6);
+  background-image: url("/confiance/ooredoo.png");
+}
+[data-group="1"] .logo:nth-child(7) {
+  animation-delay: calc(30s / 8 * -7);
+  background-image: url("/confiance/djezzy.png");
+  background-size: 50%;
+}
+[data-group="1"] .logo:nth-child(8) {
+  animation-delay: calc(30s / 8 * -8);
+  background-image: url("/confiance/yassir.png");
+}
+
+[data-group="2"] .logo:nth-child(1) {
+  animation-delay: calc(30s / 6 * -1);
+  background-image: url("/confiance/ernst-young.png");
+  background-size: 50%;
+}
+[data-group="2"] .logo:nth-child(2) {
+  animation-delay: calc(30s / 6 * -2);
+  background-image: url("/confiance/AXA.png");
+}
+[data-group="2"] .logo:nth-child(3) {
+  animation-delay: calc(30s / 6 * -3);
+  background-image: url("/confiance/kpmg.png");
+}
+[data-group="2"] .logo:nth-child(4) {
+  animation-delay: calc(30s / 6 * -4);
+  background-image: url("/confiance/ernst-young.png");
+  background-size: 50%;
+}
+[data-group="2"] .logo:nth-child(5) {
+  animation-delay: calc(30s / 6 * -5);
+  background-image: url("/confiance/AXA.png");
+}
+[data-group="2"] .logo:nth-child(6) {
+  animation-delay: calc(30s / 6 * -6);
+  background-image: url("/confiance/kpmg.png");
+}
+
+[data-group="3"] .logo:nth-child(1) {
+  animation-delay: calc(30s / 8 * -1);
+  background-image: url("/confiance/natixis algerie.png");
+}
+[data-group="3"] .logo:nth-child(2) {
+  animation-delay: calc(30s / 8 * -2);
+  background-image: url("/confiance/mazars.png");
+}
+[data-group="3"] .logo:nth-child(3) {
+  animation-delay: calc(30s / 8 * -3);
+  background-image: url("/confiance/emploitic-logo-removebg-preview 1.png");
+}
+[data-group="3"] .logo:nth-child(4) {
+  animation-delay: calc(30s / 8 * -4);
+  background-image: url("/confiance/societe-generale.png");
+}
+[data-group="3"] .logo:nth-child(5) {
+  animation-delay: calc(30s / 8 * -5);
+  background-image: url("/confiance/natixis algerie.png");
+}
+[data-group="3"] .logo:nth-child(6) {
+  animation-delay: calc(30s / 8 * -6);
+  background-image: url("/confiance/mazars.png");
+}
+[data-group="3"] .logo:nth-child(7) {
+  animation-delay: calc(30s / 8 * -7);
+  background-image: url("/confiance/emploitic-logo-removebg-preview 1.png");
+}
+[data-group="3"] .logo:nth-child(8) {
+  animation-delay: calc(30s / 8 * -8);
+  background-image: url("/confiance/societe-generale.png");
+}

@@ -1,7 +1,9 @@
+import Animation from "./Animation";
+
 export default function HeroSection() {
   return (
-    <section>
-      <div className="hero-container bg-white bg-opacity-100 flex flex-col">
+    <section className="flex flex-col gap-10">
+      <div className="hero-container bg-white bg-opacity-100 flex flex-col gap-10">
         <h1 className="font-satoshi text-5xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-8xl text-black font-bold">
           {" "}
           WE ACT <br /> FOR <span className="text-blue">IMPACT</span>
@@ -17,6 +19,7 @@ export default function HeroSection() {
           </h2>
         </div>
       </div>
+      <Animation />
     </section>
   );
 }

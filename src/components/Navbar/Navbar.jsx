@@ -125,20 +125,35 @@ export const MobileNav = () => {
         </nav>
         <div className="grid grid-cols-2 gap-4 p-4 pb-6 mt-4">
           <div className="flex items-center gap-2">
-            <Image src={"/facebook.svg"} alt="X" height={20} width={20} />
+            <Image
+              src={"/socialmedia/facebook.svg"}
+              alt="X"
+              height={20}
+              width={20}
+            />
             <p>Facebook</p>
           </div>
 
           <div className="flex items-center gap-2">
-            <Image src={"/linkedin.svg"} alt="X" height={20} width={20} />
+            <Image
+              src={"/socialmedia/linkedin.svg"}
+              alt="X"
+              height={20}
+              width={20}
+            />
             <p>LinkedIn</p>
           </div>
           <div className="flex items-center gap-2">
-            <Image src={"/instagram.svg"} alt="X" height={20} width={20} />
+            <Image
+              src={"/socialmedia/instagram.svg"}
+              alt="X"
+              height={20}
+              width={20}
+            />
             <p>Instagram</p>
           </div>
           <div className="flex items-center gap-2">
-            <Image src={"/x.svg"} alt="X" height={20} width={20} />
+            <Image src={"/socialmedia/x.svg"} alt="X" height={20} width={20} />
             <p>Twitter</p>
           </div>
         </div>
