@@ -15,10 +15,10 @@ const Box = ({ event }) => {
           alt={event.title}
         />
         {/* Overlay title on the image in mobile view */}
-        <h1 className="font-satoshi font-bold text-2xl text-white absolute bottom-14 left-8 lg:hidden">
+        <h1 className="font-satoshi font-bold text-2xl text-white absolute bottom-10 left-5 lg:hidden">
           {event.title}
         </h1>
-        <p className="font-satoshi text-sm text-white absolute bottom-9 left-8 lg:hidden">
+        <p className="font-satoshi font-normal text-sm text-white absolute bottom-5 left-5 lg:hidden">
           {event.themes}
         </p>
       </div>
@@ -28,15 +28,15 @@ const Box = ({ event }) => {
           Evénements
         </div>
         <div>
-          <h1 className="font-satoshi font-bold text-5xl text-[#212121] mb-2 hidden lg:block">
+          <h1 className="font-satoshi font-bold text-5xl text-[#212121] mb-6 hidden lg:block">
             {event.title}
           </h1>
-          <p className="font-satoshi text-base font-normal lg:text-xl leading-6 lg:leading-10 mb-5 lg:mb-0 text-[#212121] lg:pr-12">
+          <p className="font-satoshi text-sm font-normal md:text-base leading-relaxed md:leading-relaxed text-pretty mb-5 lg:mb-0 text-[#212121] lg:pr-12">
             {event.description}
           </p>
         </div>
         <div className="w-full flex justify-end lg:justify-normal">
-          <button className="text-sm px-7 py-2 font-satoshi rounded-3xl flex items-center gap-3 text-white bg-[#212121]">
+          <button className="text-sm px-7 py-4 font-satoshi rounded-3xl flex items-center gap-3 text-white bg-[#212121]">
             En savoir plus
             <FaArrowRightLong />
           </button>

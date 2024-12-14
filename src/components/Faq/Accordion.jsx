@@ -9,7 +9,7 @@ const Accordion = ({ title, answer, isOpen, onClick }) => {
           isOpen ? "text-[#20b3ad]" : "text-[#80868B] hover:text-[#20b3ad]"
         }`}
       >
-        <span className="font-satoshi text-xl font-medium flex text-left">
+        <span className="font-satoshi text-base md:text-xl font-bold flex text-left">
           {title}
         </span>
 
@@ -46,7 +46,7 @@ const Accordion = ({ title, answer, isOpen, onClick }) => {
           isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
         }`}
       >
-        <div className="flex overflow-hidden font-satoshi pt-2 leading-loose text-left">
+        <div className="flex overflow-hidden text-base md:text-lg font-satoshi pt-2 leading-relaxed text-left">
           {answer}
         </div>
       </div>

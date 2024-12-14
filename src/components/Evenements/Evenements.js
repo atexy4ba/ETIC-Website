@@ -19,13 +19,14 @@ const Evenements = () => {
     infinite: false,
     slidesToShow: 1,
     speed: 500,
+    arrows: false,
     afterChange: (index) => setCurrentSlide(index),
   };
 
   const progress = ((currentSlide + 1) / totalSlides) * 100;
 
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex px-5 md:px-24 flex-col gap-5">
       <TitreSection
         h1={"Explorez nos"}
         span={"événements"}
@@ -34,8 +35,9 @@ const Evenements = () => {
         }
         color={"#EB9223"}
       />
-      <div className="bg-black overflow-hidden">
-        <Slider ref={sliderRef} {...settings}>
+
+      <div className="bg-black -mx-12 md:-mx-24 md:px-12  overflow-hidden">
+        <Slider ref={sliderRef} {...settings} >
           {data &&
             data.map((event) => (
               <div key={event.id}>
@@ -43,7 +45,8 @@ const Evenements = () => {
               </div>
             ))}
         </Slider>
-        <div className="ml-10 m-5 flex lg:justify-start justify-between items-center gap-16">
+
+        <div className=" px-10 flex mb-10  lg:justify-start justify-between items-center gap-16">
           <div className="flex justify-start gap-2">
             <button
               onClick={() => sliderRef.current.slickPrev()}

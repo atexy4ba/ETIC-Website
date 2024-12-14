@@ -57,18 +57,18 @@ function Decouvrez() {
   }, []);
 
   return (
-    <div className=" mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-20 ">
+    <div className=" mx-auto px-5 md:px-24 " id="apropos">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-20 gap-10 ">
         <div className="flex flex-col justify-between">
           <h1
-            className="font-satoshi font-bold text-[60px] leading-[65px] pb-5 "
+            className="font-satoshi font-bold md:text-[60px] text-4xl md:leading-[65px] pb-5 "
             style={{ color: "#212121" }}
           >
             Découvrez avec nous <span style={{ color: "#EB9223" }}>ETIC</span>
           </h1>
 
           <p
-            className="font-satoshi font-normal text-lg md:text-base leading-relaxed "
+            className="font-satoshi font-normal text-sm md:text-base leading-relaxed "
             style={{ color: "#2D2D2D" }}
           >
             ETIC est une organisation estudiantine à but non lucratif ayant vu
@@ -118,7 +118,7 @@ function Decouvrez() {
           </div>
           <div className=" flex-1 order-1 md:order-2">
             <p
-              className="font-satoshi font-normal text-lg md:text-base leading-relaxed "
+              className="font-satoshi font-normal text-sm md:text-base leading-relaxed "
               style={{ color: "#2D2D2D" }}
             >
               ETIC est une organisation estudiantine à but non lucratif ayant vu
@@ -134,7 +134,7 @@ function Decouvrez() {
         <div className="flex flex-col gap-11 ">
           <div className=" flex-1">
             <p
-              className="font-satoshi font-normal text-lg md:text-base leading-relaxed "
+              className="font-satoshi font-normal text-sm md:text-base leading-relaxed "
               style={{ color: "#2D2D2D" }}
             >
               ETIC est une organisation estudiantine à but non lucratif ayant vu
