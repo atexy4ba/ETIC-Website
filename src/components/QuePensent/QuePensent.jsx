@@ -30,6 +30,12 @@ const QuePensent = () => {
       role: "Vice Présidente",
       photo: "/testimonial/touria.png",
     },
+    {
+      text: "Rejoindre ETIC ? KI GHAYA !",
+      author: "Dounia Habib",
+      role: "Membre",
+      photo: "/testimonial/dounia.jpg",
+    },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
