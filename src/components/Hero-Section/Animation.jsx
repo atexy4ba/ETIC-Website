@@ -19,7 +19,7 @@ export default class LottieControl extends React.Component {
     };
 
     return (
-      <div className="">
+      <div className="h-12 md:h-auto">
         <Lottie options={defaultOptions} />
       </div>
     );

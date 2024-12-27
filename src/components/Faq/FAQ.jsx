@@ -63,7 +63,7 @@ const FAQ = () => {
         
         This is why were working to organize the worlds information and make it universally accessible and useful across 1,000 languages—and ideally thousands more."
           isOpen={openIndex === 3}
-          onClick={() => handleAccordionClick(2)}
+          onClick={() => handleAccordionClick(3)}
         />
         <Accordion
           title="Comment puis-je rejoindre ETIC ?"
@@ -75,7 +75,7 @@ const FAQ = () => {
         
         This is why were working to organize the worlds information and make it universally accessible and useful across 1,000 languages—and ideally thousands more."
           isOpen={openIndex === 4}
-          onClick={() => handleAccordionClick(2)}
+          onClick={() => handleAccordionClick(4)}
         />
       </div>
     </div>

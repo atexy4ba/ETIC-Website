@@ -2,7 +2,7 @@ import Animation from "./Animation";
 
 export default function HeroSection() {
   return (
-    <section className="flex flex-col px-5 md:px-16 gap-10">
+    <section className="flex flex-col px-5 md:px-24 gap-10">
       <div className="hero-container bg-white bg-opacity-100 flex flex-col gap-10">
         <h1 className="font-satoshi text-5xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-8xl text-black font-bold">
           {" "}

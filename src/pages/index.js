@@ -8,7 +8,6 @@ import Decouvrez from "@/components/Decouvrez-ETIC/Decouvrez-ETIC";
 import FAQ from "@/components/Faq/FAQ";
 import Slider from "@/components/Confiance/Slider";
 import Footer from "@/components/Footer/Footer";
-import Writers from "@/components/Writers/Writers";
 import Preloader from "@/components/Preloader";
 import QuePensent from "@/components/QuePensent/QuePensent";
 
@@ -16,6 +15,9 @@ import { AnimatePresence } from "framer-motion";
 
 import { useEffect, useState } from "react";
 import ContactSection from "@/components/Contact/Contact";
+import Contact from "@/components/Contact/Contact";
+import Local from "@/components/Local/Local";
+import Writers from "@/components/Writers/Writers";
 
 // const satoshiRegular = localFont({
 //   src: "./fonts/Satoshi-Regular.woff",
@@ -24,34 +26,27 @@ import ContactSection from "@/components/Contact/Contact";
 // });
 
 export default function Home() {
-
-
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect( () => {
-    (
-      async () => {
-          const LocomotiveScroll = (await import('locomotive-scroll')).default
-          const locomotiveScroll = new LocomotiveScroll();
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
 
-          setTimeout( () => {
-            setIsLoading(false);
-            document.body.style.cursor = 'default'
-            window.scrollTo(0,0);
-          }, 2000)
-
-      }
-    )()
-  }, [])
-
-
+      setTimeout(() => {
+        setIsLoading(false);
+        document.body.style.cursor = "default";
+        window.scrollTo(0, 0);
+      }, 2000);
+    })();
+  }, []);
 
   return (
     // <div className="font-satoshi font-bold text-8xl uppercase">Bon courage</div>
-    <div className="font-satoshi font-bold text-8xl flex flex-col gap-32 overflow-hidden">
-      <AnimatePresence mode='wait'>
+    <div className="font-satoshi font-bold text-8xl flex flex-col md:gap-32 gap-16 overflow-hidden">
+      {/* <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
-      </AnimatePresence>
+      </AnimatePresence> */}
       <Navbar />
       <Herosection />
       <Decouvrez />
@@ -60,7 +55,8 @@ export default function Home() {
       <Writers />
       <QuePensent />
       <FAQ />
-      
+      <Contact />
+      <Local />
       <Footer />
     </div>
   );
