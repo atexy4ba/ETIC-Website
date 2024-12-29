@@ -9,7 +9,8 @@ const Card = ({ data }) => {
         {data.tags.map((tag, index) => (
           <div
             key={index}
-            className={`px-2 py-1 bg-${tag.color} rounded-full text-sm`}
+            className={`px-2 py-1 rounded-full text-sm`}
+            style={{ backgroundColor: tag.color }}
           >
             {tag.name}
           </div>

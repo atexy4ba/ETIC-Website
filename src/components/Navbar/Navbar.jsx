@@ -3,7 +3,7 @@ import { AnimatePresence, easeIn, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import ETIC from "../../../public/etic.svg";
+import ETIC from "../../../public/etic.png";
 import { ContactButton } from "./ContactButton";
 import { useRouter } from "next/router";
 
@@ -30,7 +30,7 @@ export const Navbar = () => {
             alt=""
           />
           <Image
-            src={"/etic_blanc.svg"}
+            src={"/LOGO_ETIC_BLANC.png"}
             className="w-[50px] absolute  z-[0] left-1/2 top-1/2  -translate-x-1/2 -translate-y-1/2"
             alt=""
             width={1000}
@@ -41,21 +41,23 @@ export const Navbar = () => {
         <nav className="max-sm:hidden font-medium max-lg:text-sm">
           <ul className="flex items-center gap-6 max-lg:gap-4 ">
             {links.map((link) => {
-              const selected = link.url === router.asPath;
               return (
                 <li
                   key={link.name}
-                  style={{ fontWeight: selected ? "600" : "500" }}
-                  className="group relative"
+                  style={{ fontWeight: "500" }}
+                  className="group relative cursor-pointer"
+                  onClick={() => {
+                    const element = document.getElementById(link.url);
+                    element?.scrollIntoView({
+                      behavior: "smooth",
+                    });
+                  }}
                 >
-                  <Link href={link.url}>{link.name}</Link>
+                  {link.name}
                   <div
                     className={
                       "absolute w-0 h-[1px] rounded-full top-full bg-black group-hover:w-full duration-300  "
                     }
-                    style={{
-                      width: selected ? "100%" : null,
-                    }}
                   />
                 </li>
               );
@@ -97,7 +99,7 @@ export const MobileNav = () => {
           width: { duration: 0.4 },
           height: { duration: 0.6, delay: 0.4, ease: easeIn },
         }}
-        className=" text-white  absolute top-0 right-0 bg-black w-full   z-[0] sm:hidden overflow-clip rounded-2xl px-4"
+        className=" text-white  absolute top-0 right-0 bg-black w-full sm:hidden overflow-clip rounded-2xl px-4"
       >
         <nav className="mt-20 font-medium">
           <ul className=" flex flex-col p-4  gap-6 max-lg:gap-4">
@@ -107,9 +109,15 @@ export const MobileNav = () => {
                 <li
                   key={link.name}
                   style={{ fontWeight: selected ? "600" : "500" }}
-                  className="group relative w-fit "
+                  className="group relative w-fit"
+                  onClick={() => {
+                    const element = document.getElementById(link.url);
+                    element?.scrollIntoView({
+                      behavior: "smooth",
+                    });
+                  }}
                 >
-                  <Link href={link.url}>{link.name}</Link>
+                  {link.name}
                   <div
                     className={
                       "absolute w-0 h-[1px] rounded-full top-full bg-white group-hover:w-full duration-300  "
@@ -169,23 +177,18 @@ export const links = [
   },
   {
     name: "À propos",
-    url: "/#apropos",
-  },
-
-  {
-    name: "Nos Projets",
-    url: "/#nosprojets",
+    url: "apropos",
   },
   {
     name: "Articles",
-    url: "/#articles",
+    url: "writers",
   },
   {
     name: "Nos Évenements",
-    url: "/#noseevenements",
+    url: "events",
   },
   {
     name: "Contact",
-    url: "/#contact",
+    url: "contact",
   },
 ];

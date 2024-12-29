@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <div className="flex flex-col text-white bg-black gap-8 w-full px-5 py-16 md:px-24 md:py-20">
       <div className="logo-wehdo flex md:hidden items-center gap-8">
-        <Image src={"/etic_blanc.svg"} width={50} height={50} alt="ETIC Logo" />
+        <Image src={"/LOGO_ETIC_BLANC.png"} width={50} height={50} alt="zz" />
         <Image
           src={"/octenium-logo.png"}
           width={150}
@@ -17,7 +17,12 @@ export default function Footer() {
         />
       </div>
       <div className="logo-wehdo md:flex items-center gap-8 hidden">
-        <Image src={"/etic_blanc.svg"} width={70} height={70} alt="ETIC Logo" />
+        <Image
+          src={"/LOGO_ETIC_BLANC.png"}
+          width={70}
+          height={70}
+          alt="ETIC Logo"
+        />
         <Image
           src={"/octenium-logo.png"}
           width={150}
@@ -143,19 +148,16 @@ export default function Footer() {
               </div>
             </div>
             <div className="w-full flex justify-end lg:justify-normal">
-            <Link href="/contact">
-              <button className="text-sm px-6 py-4 font-satoshi rounded-3xl flex items-center text-black gap-3 bg-white">
-                Nous contacter
-                <FaArrowRightLong />
-              </button>
-            </Link>
-          </div>
+              <Link href="/contact">
+                <button className="text-sm px-6 py-4 font-satoshi rounded-3xl flex items-center text-black gap-3 bg-white">
+                  Nous contacter
+                  <FaArrowRightLong />
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-
-
-      
     </div>
   );
 }

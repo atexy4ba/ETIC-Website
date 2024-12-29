@@ -2,7 +2,10 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <div className="flex md:flex-row flex-col justify-between text-xl gap-8 px-5 md:px-24">
+    <div
+      className="flex md:flex-row flex-col justify-between text-xl gap-8 px-5 md:px-24"
+      id="contact"
+    >
       <div className="flex md:w-[40%] flex-col justify-between gap-8">
         <div className="flex flex-col gap-4">
           <h1 className="md:text-6xl text-4xl font-bold font-satoshi">

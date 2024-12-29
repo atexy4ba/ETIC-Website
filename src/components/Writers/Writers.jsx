@@ -5,8 +5,8 @@ import TitreSection from "../Titre-section/Titre-section";
 const data = [
   {
     tags: [
-      { name: "Technologie", color: "yellow" },
-      { name: "Communication", color: "blue" },
+      { name: "Technologie", color: "#F0C614" },
+      { name: "Communication", color: "#20B3AD" },
     ],
     image: "/writers/Frame37.png",
     titre: "Comment gérer les études et le freelance en parallèle ?",
@@ -15,8 +15,8 @@ const data = [
   },
   {
     tags: [
-      { name: "Technologie", color: "yellow" },
-      { name: "Communication", color: "blue" },
+      { name: "Technologie", color: "#F0C614" },
+      { name: "Communication", color: "#20B3AD" },
     ],
     image: "/writers/Frame37.png",
     titre: "Comment gérer les études et le freelance en parallèle ?",
@@ -25,8 +25,8 @@ const data = [
   },
   {
     tags: [
-      { name: "Technologie", color: "yellow" },
-      { name: "Communication", color: "blue" },
+      { name: "Technologie", color: "#F0C614" },
+      { name: "Communication", color: "#20B3AD" },
     ],
     image: "/writers/Frame37.png",
     titre: "Comment gérer les études et le freelance en parallèle ?",
@@ -37,7 +37,7 @@ const data = [
 
 const Writers = () => {
   return (
-    <div className="flex flex-col px-5 md:px-24 gap-6">
+    <div className="flex flex-col px-5 md:px-24 gap-6" id="writers">
       <TitreSection
         h1={"We Write"}
         span={"For Impact"}

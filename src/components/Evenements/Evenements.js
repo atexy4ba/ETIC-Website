@@ -26,7 +26,7 @@ const Evenements = () => {
   const progress = ((currentSlide + 1) / totalSlides) * 100;
 
   return (
-    <div className="flex px-5 md:px-24 flex-col gap-5">
+    <div className="flex px-5 md:px-16 flex-col gap-5" id="events">
       <TitreSection
         h1={"Explorez nos"}
         span={"événements"}
@@ -36,8 +36,8 @@ const Evenements = () => {
         color={"#EB9223"}
       />
 
-      <div className="bg-black -mx-12 md:-mx-24 md:px-12  overflow-hidden">
-        <Slider ref={sliderRef} {...settings} >
+      <div className="bg-black -mx-12 md:-mx-24 md:px-12 overflow-hidden">
+        <Slider ref={sliderRef} {...settings}>
           {data &&
             data.map((event) => (
               <div key={event.id}>

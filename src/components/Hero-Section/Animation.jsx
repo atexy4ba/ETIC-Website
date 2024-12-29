@@ -16,10 +16,11 @@ export default class LottieControl extends React.Component {
       rendererSettings: {
         preserveAspectRatio: "xMidYMid slice",
       },
+      isClickToPauseDisabled: true,
     };
 
     return (
-      <div className="h-12 md:h-auto">
+      <div className="h-12 md:h-auto z-0">
         <Lottie options={defaultOptions} />
       </div>
     );
