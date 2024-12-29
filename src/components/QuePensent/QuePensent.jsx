@@ -24,6 +24,7 @@ const QuePensent = () => {
       role: "Alumni",
       photo: "/testimonial/racim.jpeg",
     },
+
     {
       text: "INCROYABLE.",
       author: "Touria Djafour",
@@ -45,6 +46,7 @@ const QuePensent = () => {
   };
 
   useEffect(() => {
+    console.log("test");
     const interval = setInterval(handleNext, 4000);
     return () => clearInterval(interval);
   }, [currentIndex]);
