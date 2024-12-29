@@ -26,7 +26,7 @@ const QuePensent = () => {
     },
     {
       text: "INCROYABLE.",
-      author: "touria Djafour",
+      author: "Touria Djafour",
       role: "Vice Présidente",
       photo: "/testimonial/touria.png",
     },
