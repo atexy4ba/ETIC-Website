@@ -1,6 +1,9 @@
-import Animation from "./Animation";
+import dynamic from "next/dynamic";
 
 export default function HeroSection() {
+  const Animation = dynamic(() => import("./Animation"), {
+    ssr: false,
+  });
   return (
     <section className="flex flex-col px-5 md:px-24 gap-10 -z-50">
       <div className="hero-container bg-white bg-opacity-100 flex flex-col gap-10">
