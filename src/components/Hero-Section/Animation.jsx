@@ -21,7 +21,7 @@ export default class LottieControl extends React.Component {
 
     return (
       <div className="h-12 md:h-auto z-0">
-        <Lottie options={defaultOptions} />
+        {document ? <Lottie options={defaultOptions} /> : null}
       </div>
     );
   }
