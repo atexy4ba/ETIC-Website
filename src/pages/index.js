@@ -44,11 +44,11 @@ export default function Home() {
   return (
     // <div className="font-satoshi font-bold text-8xl uppercase">Bon courage</div>
     <div className="font-satoshi font-bold text-8xl flex flex-col md:gap-32 gap-16 overflow-hidden">
-      {/* <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
-      </AnimatePresence> */}
+      </AnimatePresence>
       <Navbar />
-      {!isLoading && <Herosection />}
+      {<Herosection />}
       <Decouvrez />
       <Evenements />
       <Slider />
