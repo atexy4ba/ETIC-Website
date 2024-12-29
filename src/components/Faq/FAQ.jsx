@@ -13,7 +13,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className="flex flex-col gap-10 px-5 md:px-24">
+    <div className="flex flex-col gap-10 px-5 md:px-24" id="faq">
       <TitreSection
         h1={"On répond"}
         span={"à vos questions"}

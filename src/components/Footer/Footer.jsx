@@ -48,22 +48,76 @@ export default function Footer() {
             <h1>Sitemap</h1>
             <ul className="font-normal flex flex-col gap-1">
               <li>
-                <Link href="/decouvrez-etic">Découvrez ETIC</Link>
+                <div
+                  onClick={() => {
+                    const element = document.getElementById("apropos");
+                    element?.scrollIntoView({
+                      behavior: "smooth",
+                    });
+                  }}
+                >
+                  Découvrez ETIC
+                </div>
               </li>
               <li>
-                <Link href="/nos-evenements">Nos événements</Link>
+                <div
+                  onClick={() => {
+                    const element = document.getElementById("events");
+                    element?.scrollIntoView({
+                      behavior: "smooth",
+                    });
+                  }}
+                >
+                  Nos événements
+                </div>
               </li>
               <li>
-                <Link href="/nos-partenaires">Nos partenaires</Link>
+                <div
+                  onClick={() => {
+                    const element = document.getElementById("confiance");
+                    element?.scrollIntoView({
+                      behavior: "smooth",
+                    });
+                  }}
+                >
+                  Nos partenaires
+                </div>
               </li>
               <li>
-                <Link href="/eticiens">ETICiens</Link>
+                <div
+                  onClick={() => {
+                    const element = document.getElementById("writers");
+                    element?.scrollIntoView({
+                      behavior: "smooth",
+                    });
+                  }}
+                >
+                  ETIC Writers
+                </div>
               </li>
               <li>
-                <Link href="/faq">Foire aux questions</Link>
+                <div
+                  onClick={() => {
+                    const element = document.getElementById("faq");
+                    element?.scrollIntoView({
+                      behavior: "smooth",
+                    });
+                  }}
+                >
+                  Foire aux questions
+                </div>
               </li>
               <li>
-                <Link href="/contact">Contact</Link>
+                <div
+                  onClick={() => {
+                    const element = document.getElementById("contact");
+                    element?.scrollIntoView({
+                      behavior: "smooth",
+                    });
+                  }}
+                >
+                  Contact
+                </div>
               </li>
             </ul>
           </div>
@@ -73,27 +127,36 @@ export default function Footer() {
           <div className="flex flex-col gap-8">
             <h1>Réseaux sociaux</h1>
             <div className="flex gap-4">
-              <Link href="https://www.instagram.com" target="_blank">
+              <Link href="https://www.instagram.com/etic_club/" target="_blank">
                 <FaInstagram size={40} />
               </Link>
-              <Link href="https://www.facebook.com" target="_blank">
+              <Link href="https://www.facebook.com/ETIC.Club/" target="_blank">
                 <FaFacebook size={40} />
               </Link>
-              <Link href="https://www.linkedin.com" target="_blank">
+              <Link
+                href="https://dz.linkedin.com/company/etic-club"
+                target="_blank"
+              >
                 <FaLinkedin size={40} />
               </Link>
-              <Link href="https://www.tiktok.com" target="_blank">
+              <Link href="https://www.tiktok.com/@etic.club" target="_blank">
                 <FaTiktok size={40} />
               </Link>
             </div>
           </div>
-          <div className="w-full flex justify-end lg:justify-normal">
-            <Link href="/contact">
-              <button className="text-sm px-7 py-4 font-satoshi rounded-3xl flex items-center text-black gap-3 bg-white">
-                Nous contacter
-                <FaArrowRightLong />
-              </button>
-            </Link>
+          <div
+            className="w-full flex justify-end lg:justify-normal"
+            onClick={() => {
+              const element = document.getElementById("contact");
+              element?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
+            <button className="text-sm px-7 py-4 font-satoshi rounded-3xl flex items-center text-black gap-3 bg-white">
+              Nous contacter
+              <FaArrowRightLong />
+            </button>
           </div>
         </div>
       </div>
@@ -109,22 +172,76 @@ export default function Footer() {
             <h1>Sitemap</h1>
             <ul className="font-normal text-sm flex flex-col gap-2">
               <li>
-                <Link href="#decouvrez">Découvrez ETIC</Link>
+                <div
+                  onClick={() => {
+                    const element = document.getElementById("apropos");
+                    element?.scrollIntoView({
+                      behavior: "smooth",
+                    });
+                  }}
+                >
+                  Découvrez ETIC
+                </div>
               </li>
               <li>
-                <Link href="#nos-evenements">Nos événements</Link>
+                <div
+                  onClick={() => {
+                    const element = document.getElementById("events");
+                    element?.scrollIntoView({
+                      behavior: "smooth",
+                    });
+                  }}
+                >
+                  Nos événements
+                </div>
               </li>
               <li>
-                <Link href="#nos-partenaires">Nos partenaires</Link>
+                <div
+                  onClick={() => {
+                    const element = document.getElementById("confiance");
+                    element?.scrollIntoView({
+                      behavior: "smooth",
+                    });
+                  }}
+                >
+                  Nos partenaires
+                </div>
               </li>
               <li>
-                <Link href="#eticiens">ETICiens</Link>
+                <div
+                  onClick={() => {
+                    const element = document.getElementById("writers");
+                    element?.scrollIntoView({
+                      behavior: "smooth",
+                    });
+                  }}
+                >
+                  ETIC Writers
+                </div>
               </li>
               <li>
-                <Link href="#faq">Foire aux questions</Link>
+                <div
+                  onClick={() => {
+                    const element = document.getElementById("faq");
+                    element?.scrollIntoView({
+                      behavior: "smooth",
+                    });
+                  }}
+                >
+                  Foire aux questions
+                </div>
               </li>
               <li>
-                <Link href="#contact">Contact</Link>
+                <div
+                  onClick={() => {
+                    const element = document.getElementById("contact");
+                    element?.scrollIntoView({
+                      behavior: "smooth",
+                    });
+                  }}
+                >
+                  Contact
+                </div>
               </li>
             </ul>
           </div>
@@ -133,27 +250,42 @@ export default function Footer() {
             <div className="flex flex-col gap-4">
               <h1>Réseaux sociaux</h1>
               <div className="flex gap-4">
-                <Link href="https://www.instagram.com" target="_blank">
+                <Link
+                  href="https://www.instagram.com/etic_club/"
+                  target="_blank"
+                >
                   <FaInstagram size={25} />
                 </Link>
-                <Link href="https://www.facebook.com" target="_blank">
+                <Link
+                  href="https://www.facebook.com/ETIC.Club/"
+                  target="_blank"
+                >
                   <FaFacebook size={25} />
                 </Link>
-                <Link href="https://www.linkedin.com" target="_blank">
+                <Link
+                  href="https://dz.linkedin.com/company/etic-club"
+                  target="_blank"
+                >
                   <FaLinkedin size={25} />
                 </Link>
-                <Link href="https://www.tiktok.com" target="_blank">
+                <Link href="https://www.tiktok.com/@etic.club" target="_blank">
                   <FaTiktok size={25} />
                 </Link>
               </div>
             </div>
             <div className="w-full flex justify-end lg:justify-normal">
-              <Link href="/contact">
-                <button className="text-sm px-6 py-4 font-satoshi rounded-3xl flex items-center text-black gap-3 bg-white">
-                  Nous contacter
-                  <FaArrowRightLong />
-                </button>
-              </Link>
+              <button
+                className="text-sm px-6 py-4 font-satoshi rounded-3xl flex items-center text-black gap-3 bg-white"
+                onClick={() => {
+                  const element = document.getElementById("contact");
+                  element?.scrollIntoView({
+                    behavior: "smooth",
+                  });
+                }}
+              >
+                Nous contacter
+                <FaArrowRightLong />
+              </button>
             </div>
           </div>
         </div>
