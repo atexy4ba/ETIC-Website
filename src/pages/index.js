@@ -48,7 +48,7 @@ export default function Home() {
         {isLoading && <Preloader />}
       </AnimatePresence> */}
       <Navbar />
-      <Herosection />
+      {!isLoading && <Herosection />}
       <Decouvrez />
       <Evenements />
       <Slider />
