@@ -11,9 +11,9 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const router = useRouter();
-  return (
-    <div className="w-full px-4 sticky top-4">
-      <div className="relative text-base  text-black mx-auto w-full flex justify-between items-center bg-white rounded-full py-[14px] px-8 m-4 max-w-[1000px] max-md:bg-inherit transition duration-100 ">
+return (
+   <div className="w-full px-4 sticky top-4">
+      <div className="relative text-base  text-black mx-auto w-full flex justify-between items-center bg-white rounded-full py-[14px] px-8 m-4 max-w-[1000px] max-md:bg-inherit transition duration-100 md:shadow-[0_16px_32px_0px_rgba(0,0,0,0.08)]">
         <Image src={ETIC} className="w-[50px] max-sm:hidden" alt="" />
 
         <div className="sm:hidden z-[2] size-[50px] relative">
@@ -67,7 +67,8 @@ export const Navbar = () => {
         {/*Mobile Navbar*/}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="py-[12px] px-8 bg-white  font-semibold  sm:hidden rounded-full z-[1]"
+          className="py-[8px] px-6 font-medium sm:hidden rounded-full z-[1]"
+          style={{backgroundColor: isOpen ? "#fff" : "#000", color: isOpen ? "#000" : "#fff"}}
         >
           Menu
         </button>

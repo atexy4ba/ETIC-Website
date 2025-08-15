@@ -174,3 +174,7 @@
   animation-delay: calc(30s / 8 * -8);
   background-image: url("/confiance/societe-generale.png");
 }
+
+.half-clip-right {
+  clip-path: inset(0 50% 0 0); /* top right bottom left */
+}

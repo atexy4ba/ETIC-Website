@@ -5,8 +5,8 @@ export default function HeroSection() {
     ssr: false,
   });
   return (
-    <section className="flex flex-col px-5 md:px-24 gap-10 -z-50">
-      <div className="hero-container bg-white bg-opacity-100 flex flex-col gap-10">
+    <section className="flex flex-col  gap-10 -z-50">
+      <div className="hero-container px-5 md:px-24 bg-white bg-opacity-100 flex flex-col gap-10">
         <h1 className="font-satoshi text-5xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-8xl text-black font-bold">
           {" "}
           WE ACT <br /> FOR <span className="text-blue">IMPACT</span>
@@ -15,9 +15,9 @@ export default function HeroSection() {
         <div className="flex flex-row justify-between">
           <p className="font-satoshi  text-black font-normal text-lg block">
             ETIC Club est le premier club étudiant dédié à l’entrepreneuriat,
-            <br /> l’innovation et aux nouvelles technologies.
+            <br className="hidden md:block" /> l’innovation et aux nouvelles technologies.
           </p>
-          <h2 className="font-satoshi text-2xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-bold">
+          <h2 className="font-satoshi text-2xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-bold hidden md:block">
             SINCE 2009
           </h2>
         </div>
