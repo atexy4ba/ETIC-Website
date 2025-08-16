@@ -9,7 +9,7 @@ const Box = ({ event }) => {
       style={{ backgroundColor: event.color }}
     >
       {/* Image first on mobile, second on larger screens */}
-      <div className="flex-grow relative order-1 lg:order-2 mb-6 lg:mb-0 w-1/2">
+      <div className="flex-grow relative order-1 lg:order-2 mb-6 lg:mb-0">
         <img
           src={event.img}
           className="rounded-3xl w-full h-auto"
