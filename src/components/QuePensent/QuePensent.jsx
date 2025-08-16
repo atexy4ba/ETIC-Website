@@ -52,7 +52,7 @@ const QuePensent = () => {
   }, [currentIndex]);
 
   return (
-    <div className="flex flex-col px-5 md:px-24">
+    <div className="flex flex-col px-5 md:px-24 md:pt-12 pt-8">
       <TitreSection
         h1={"L'avis de Nos"}
         span={"ETICiens"}

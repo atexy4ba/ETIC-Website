@@ -26,7 +26,7 @@ const Evenements = () => {
   const progress = ((currentSlide + 1) / totalSlides) * 100;
 
   return (
-    <div className="flex px-5 md:px-16 flex-col gap-5" id="events">
+    <div className="flex px-5 md:px-16 flex-col gap-5 md:pt-4 pt-8" id="events">
       <TitreSection
         h1={"Explorez nos"}
         span={"événements"}

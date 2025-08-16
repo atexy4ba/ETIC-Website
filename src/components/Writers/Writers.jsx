@@ -37,7 +37,7 @@ const data = [
 
 const Writers = () => {
   return (
-    <div className="flex flex-col px-5 md:px-24 gap-6" id="writers">
+    <div className="flex flex-col px-5 md:px-24 gap-6 md:pt-12 pt-8" id="writers">
       <TitreSection
         h1={"We Write"}
         span={"For Impact"}

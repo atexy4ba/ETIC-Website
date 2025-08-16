@@ -1,18 +1,19 @@
 "use client";
+import React, { useState, useRef, useEffect } from "react";
 import { AnimatePresence, easeIn, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import ETIC from "../../../public/etic.png";
 import { ContactButton } from "./ContactButton";
 import { useRouter } from "next/router";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const menuButtonRef = useRef(null);
   const router = useRouter();
-return (
-   <div className="w-full px-4 sticky top-4">
+
+  return (
+    <div className="w-full px-4 sticky top-4">
       <div className="relative text-base  text-black mx-auto w-full flex justify-between items-center bg-white rounded-full py-[14px] px-8 m-4 max-w-[1000px] max-md:bg-inherit transition duration-100 md:shadow-[0_16px_32px_0px_rgba(0,0,0,0.08)]">
         <Image src={ETIC} className="w-[50px] max-sm:hidden" alt="" />
 
@@ -66,13 +67,14 @@ return (
         </nav>
         {/*Mobile Navbar*/}
         <button
+          ref={menuButtonRef}
           onClick={() => setIsOpen(!isOpen)}
           className="py-[8px] px-6 font-medium sm:hidden rounded-full z-[1]"
           style={{backgroundColor: isOpen ? "#fff" : "#000", color: isOpen ? "#000" : "#fff"}}
         >
           Menu
         </button>
-        <AnimatePresence>{isOpen && <MobileNav />}</AnimatePresence>
+        <AnimatePresence>{isOpen && <MobileNav setIsOpen={setIsOpen} menuButtonRef={menuButtonRef} />}</AnimatePresence>
 
         <ContactButton />
       </div>
@@ -80,11 +82,34 @@ return (
   );
 };
 
-export const MobileNav = () => {
+export const MobileNav = ({ setIsOpen, menuButtonRef }) => {
   const router = useRouter();
+  const mobileNavRef = useRef(null);
+
+  // Handle click outside to close mobile menu
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        mobileNavRef.current && 
+        !mobileNavRef.current.contains(event.target) &&
+        menuButtonRef.current &&
+        !menuButtonRef.current.contains(event.target)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [setIsOpen, menuButtonRef]);
+  
   return (
     <>
       <motion.div
+        ref={mobileNavRef}
         initial={{
           width: 0,
           height: "100%",
@@ -116,6 +141,7 @@ export const MobileNav = () => {
                     element?.scrollIntoView({
                       behavior: "smooth",
                     });
+                    setIsOpen(false); // Close menu after clicking a link
                   }}
                 >
                   {link.name}
@@ -136,7 +162,7 @@ export const MobileNav = () => {
           <div className="flex items-center gap-2">
             <Image
               src={"/socialmedia/facebook.svg"}
-              alt="X"
+              alt="Facebook"
               height={20}
               width={20}
             />
@@ -146,7 +172,7 @@ export const MobileNav = () => {
           <div className="flex items-center gap-2">
             <Image
               src={"/socialmedia/linkedin.svg"}
-              alt="X"
+              alt="LinkedIn"
               height={20}
               width={20}
             />
@@ -155,7 +181,7 @@ export const MobileNav = () => {
           <div className="flex items-center gap-2">
             <Image
               src={"/socialmedia/instagram.svg"}
-              alt="X"
+              alt="Instagram"
               height={20}
               width={20}
             />
@@ -174,7 +200,7 @@ export const MobileNav = () => {
 export const links = [
   {
     name: "Accueil",
-    url: "/",
+    url: "hero",
   },
   {
     name: "À propos",

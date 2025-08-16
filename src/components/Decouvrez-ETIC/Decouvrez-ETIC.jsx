@@ -57,7 +57,7 @@ function Decouvrez() {
   }, []);
 
   return (
-    <div className=" mx-auto px-5 md:px-24 " id="apropos">
+    <div className=" md:pt-8 pt-8 mx-auto px-5 md:px-24 " id="apropos">
       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-20 gap-10 ">
         <div className="flex flex-col justify-between">
           <h1

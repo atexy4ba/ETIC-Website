@@ -43,7 +43,7 @@ export default function Home() {
 
   return (
     // <div className="font-satoshi font-bold text-8xl uppercase">Bon courage</div>
-    <div className="font-satoshi font-bold text-8xl flex flex-col md:gap-32 gap-16 overflow-hidden">
+    <div className="font-satoshi font-bold text-8xl flex flex-col md:gap-20 gap-16 overflow-hidden">
       <AnimatePresence mode="wait">
         {isLoading && <Preloader />}
       </AnimatePresence>

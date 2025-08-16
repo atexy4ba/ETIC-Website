@@ -3,7 +3,7 @@ import React from "react";
 const Contact = () => {
   return (
     <div
-      className="flex md:flex-row flex-col justify-between text-xl gap-8 px-5 md:px-24"
+      className="flex md:flex-row flex-col justify-between text-xl gap-8 px-5 md:px-24 md:pt-12 pt-8"
       id="contact"
     >
       <div className="flex md:w-[40%] flex-col justify-between gap-8">

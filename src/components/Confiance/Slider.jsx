@@ -3,7 +3,7 @@ import TitreSection from "../Titre-section/Titre-section";
 
 const Slider = () => {
   return (
-    <div className="flex flex-col gap-10 px-5 md:px-24" id="confiance">
+    <div className="flex flex-col gap-10 px-5 md:px-24 md:pt-12 pt-8" id="confiance">
       <TitreSection
         h1={"Ils nous ont fait"}
         span={"confiance"}
