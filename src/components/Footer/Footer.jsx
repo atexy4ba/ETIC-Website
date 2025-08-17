@@ -6,7 +6,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function Footer() {
 return (
-   <section className="flex flex-col bg-[#141516] relative">
+   <div className="flex flex-col bg-[#141516] relative rounded-[1.5rem]">
     <div className="flex flex-col text-white  gap-8 w-full px-5 py-16 md:px-24 md:py-20">
       <div className="logo-wehdo flex md:hidden items-center gap-8">
         <Image src={"/LOGO_ETIC_BLANC.png"} width={50} height={50} alt="zz" />
@@ -346,6 +346,6 @@ return (
         </div>
       </div>
     </div>
-   </section>
+   </div>
   );
 }

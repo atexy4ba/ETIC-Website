@@ -69,9 +69,9 @@ const Contact = () => {
           <div className="flex flex-col">
             <label htmlFor="name">E-mail*</label>
             <input
-              type="text"
+              type="email"
               required
-              id="name"
+              id="email"
               className="p-2 bg-[#FAFAFA] rounded-md border-[#D9D9D9] border-2"
               name="from_email"
             />
