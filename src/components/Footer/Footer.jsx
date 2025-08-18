@@ -61,7 +61,7 @@ return (
                 </div>
                 <div className="absolute w-0 h-[1px] rounded-full top-full left-0 bg-white duration-300 group-hover:w-full" />
               </li>
-              <li>
+              <li className="group relative cursor-pointer w-fit">
                 <div
                   onClick={() => {
                     const element = document.getElementById("events");
@@ -71,6 +71,7 @@ return (
                   }}
                 >
                   Nos événements
+                  <div className="absolute w-0 h-[1px] rounded-full top-full left-0 bg-white duration-300 group-hover:w-full" />
                 </div>
               </li>
               <li className="group relative cursor-pointer w-fit">

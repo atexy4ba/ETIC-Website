@@ -50,8 +50,8 @@ export default function Home() {
       <Navbar />
       {<Herosection />}
       <Decouvrez />
-      <Evenements />
       <Slider />
+      <Evenements />
       <Writers />
       <QuePensent />
       <FAQ />
