@@ -8,6 +8,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import TitreSection from "../Titre-section/Titre-section";
 
+
 const Evenements = () => {
   const sliderRef = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);

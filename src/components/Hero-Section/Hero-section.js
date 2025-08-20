@@ -5,7 +5,7 @@ export default function HeroSection() {
     ssr: false,
   });
   return (
-    <section id="hero" className="flex flex-col md:pt-12 pt-4 gap-10 -z-50">
+    <section id="hero" className="flex flex-col md:pt-4 pt-1 gap-10 -z-50">
       <div className="hero-container px-5 md:px-24 bg-white bg-opacity-100 flex flex-col gap-10">
         <h1 className="font-satoshi text-5xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-8xl text-black font-bold">
           {" "}

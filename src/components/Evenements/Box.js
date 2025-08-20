@@ -16,31 +16,22 @@ const Box = ({ event }) => {
           alt={event.title}
         />
         {/* Overlay title on the image in mobile view */}
-        <h1 className="font-satoshi font-bold text-2xl text-white absolute bottom-10 left-5 lg:hidden">
+        <h1 className="font-satoshi font-bold text-2xl text-white absolute bottom-10 left-5 right-5 text-center lg:hidden">
           {event.title}
         </h1>
-        <p className="font-satoshi font-normal text-sm text-white absolute bottom-5 left-5 lg:hidden">
+        <p className="font-satoshi font-normal text-sm text-white absolute bottom-5 left-5 right-5 text-center lg:hidden">
           {event.themes}
         </p>
       </div>
 
-      <div className="flex flex-col justify-between items-start w-full lg:w-1/2 order-2 lg:order-1 gap-4">
-        <div className="px-7 py-2 rounded-3xl text-lg font-normal font-satoshi text-white bg-[#212121] mb-10 hidden lg:block">
-          Evénements
-        </div>
+      <div className="flex flex-col justify-center items-center w-full lg:w-1/2 order-2 lg:order-1 gap-4 text-center">
         <div>
           <h1 className="font-satoshi font-bold text-5xl text-[#212121] mb-6 hidden lg:block">
             {event.title}
           </h1>
-          <p className="font-satoshi text-sm font-normal md:text-base leading-relaxed md:leading-relaxed text-pretty mb-5 lg:mb-0 text-[#212121] lg:pr-12">
+          <p className="font-satoshi text-sm font-normal md:text-base leading-relaxed md:leading-relaxed text-pretty mb-5 lg:mb-0 text-[#212121] lg:px-12">
             {event.description}
           </p>
-        </div>
-        <div className="w-full flex justify-end lg:justify-normal">
-          <button className="text-sm px-7 py-4 font-satoshi rounded-3xl flex items-center gap-3 text-white bg-[#212121]">
-            En savoir plus
-            <FaArrowRightLong />
-          </button>
         </div>
       </div>
     </div>

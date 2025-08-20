@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "Training Camp",
+    "title": "Training Camp - TC",
     "themes": "Formations - Technologies",
     "description": "Un bootcamp accéléré de 3 jours, centré sur les technologies modernes et l'entrepreneuriat. Destiné aux étudiants désireux d'acquérir ou renforcer leurs compétences, cet événement favorise la créativité, l’échange et le travail collaboratif, selon le principe du “Learning by Doing”.",
     "color": "#EB9223",
@@ -9,15 +9,15 @@
   },
   {
     "id": 2,
-    "title": "AlgiersUP",
-    "themes": "Formations - Technologies",
+    "title": "AlgiersUP - AUP",
+    "themes": "Startups - Open Innovation",
     "description": "Algiers UP est un événement s’étendant sur 3 jours successifs et qui a pour but d’initier les étudiants aux étapes essentielles de la création de Startup. Afin d'appliquer les connaissances qu’ils auront acquises, une compétition est organisée où les participants forment des équipes et tentent de mere en place de nouvelles idées et les structurer en projet,répondant ainsi à une thématique particulière.",
     "color": "#FFE600",
     "img": "/Evenements/training_camp.jpg"
   },
   {
     "id": 3,
-    "title": "Salon de l’Emploi de l’ESI",
+    "title": "Salon de l’Emploi de l’ESI - S2EE",
     "themes": "Professionnel - Entreprises",
     "description": "Le S2EE est l’évènement phare de notre organisation, il s’agit du plus grand salon de l’emploi en Algérie organisé exclusivement par des étudiants, avec 60 entreprises participantes lors de la dernière édition.",
     "color": "#20B3AD",
