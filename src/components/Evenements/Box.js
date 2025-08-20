@@ -5,31 +5,31 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const Box = ({ event }) => {
   return (
     <div
-      className="m-10 p-6 lg:p-10 rounded-xl shadow-md flex flex-col lg:flex-row"
+      className="m-10 p-8 lg:p-18 rounded-xl shadow-md flex flex-col lg:flex-row"
       style={{ backgroundColor: event.color }}
     >
       {/* Image first on mobile, second on larger screens */}
       <div className="flex-grow relative order-1 lg:order-2 mb-6 lg:mb-0">
         <img
           src={event.img}
-          className="rounded-3xl w-full h-auto"
+          className="rounded-3xl w-full h-64 lg:h-72 object-cover"
           alt={event.title}
         />
         {/* Overlay title on the image in mobile view */}
-        <h1 className="font-satoshi font-bold text-2xl text-white absolute bottom-10 left-5 right-5 text-center lg:hidden">
+        <h1 className="font-satoshi font-bold text-2xl text-white absolute bottom-10 left-8 right-8 text-left lg:hidden">
           {event.title}
         </h1>
-        <p className="font-satoshi font-normal text-sm text-white absolute bottom-5 left-5 right-5 text-center lg:hidden">
+        <p className="font-satoshi font-normal text-sm text-white absolute bottom-5 left-8 right-8 text-left lg:hidden">
           {event.themes}
         </p>
       </div>
 
-      <div className="flex flex-col justify-center items-center w-full lg:w-1/2 order-2 lg:order-1 gap-4 text-center">
-        <div>
+      <div className="flex flex-col justify-center items-start w-full lg:w-1/2 order-2 lg:order-1 gap-4">
+        <div className="ml-8 lg:ml-12">
           <h1 className="font-satoshi font-bold text-5xl text-[#212121] mb-6 hidden lg:block">
             {event.title}
           </h1>
-          <p className="font-satoshi text-sm font-normal md:text-base leading-relaxed md:leading-relaxed text-pretty mb-5 lg:mb-0 text-[#212121] lg:px-12">
+          <p className="font-satoshi text-sm font-normal md:text-base leading-relaxed md:leading-relaxed text-pretty mb-5 lg:mb-0 text-[#212121] lg:pr-16">
             {event.description}
           </p>
         </div>
