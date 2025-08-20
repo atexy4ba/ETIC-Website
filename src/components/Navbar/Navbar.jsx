@@ -14,14 +14,14 @@ export const Navbar = () => {
 
   return (
     <div className="w-full px-4 sticky top-4">
-      <div className="relative text-base  text-black mx-auto w-full flex justify-between items-center bg-white rounded-full py-[14px] px-8 m-4 max-w-[1000px] max-md:bg-inherit transition duration-100 shadow-[0_16px_32px_0px_rgba(0,0,0,0.08)]">
-        <Image src={ETIC} className="w-[50px] max-sm:hidden" alt="" />
+      <div className="relative text-base text-black mx-auto w-full flex justify-between items-center py-8 px-12 max-w-[1400px]">
+        <Image src={ETIC} className="w-[110px] max-sm:hidden" alt="" />
 
-        <div className="sm:hidden z-[2] size-[50px] relative">
+        <div className="sm:hidden z-[2] size-[110px] relative">
           <Image
             src={ETIC}
             className={
-              "max-w-[50px] absolute duration-300 z-[1] left-1/2 top-1/2  -translate-x-1/2 -translate-y-1/2"
+              "max-w-[110px] absolute duration-300 z-[1] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
             }
             style={{
               opacity: isOpen ? 0 : 1,
@@ -32,7 +32,7 @@ export const Navbar = () => {
           />
           <Image
             src={"/LOGO_ETIC_BLANC.png"}
-            className="w-[50px] absolute  z-[0] left-1/2 top-1/2  -translate-x-1/2 -translate-y-1/2"
+            className="w-[110px] absolute z-[0] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
             alt=""
             width={1000}
             height={1000}
@@ -40,13 +40,13 @@ export const Navbar = () => {
         </div>
         {/* Desktop Navbar */}
         <nav className="max-sm:hidden font-medium max-lg:text-sm">
-          <ul className="flex items-center gap-6 max-lg:gap-4 ">
+          <ul className="flex items-center gap-16 text-2xl max-lg:text-lg max-lg:gap-6">
             {links.map((link) => {
               return (
                 <li
                   key={link.name}
                   style={{ fontWeight: "500" }}
-                  className="group relative cursor-pointer"
+                  className="group relative cursor-pointer w-fit"
                   onClick={() => {
                     const element = document.getElementById(link.url);
                     element?.scrollIntoView({
@@ -55,11 +55,7 @@ export const Navbar = () => {
                   }}
                 >
                   {link.name}
-                  <div
-                    className={
-                      "absolute w-0 h-[1px] rounded-full top-full bg-black group-hover:w-full duration-300  "
-                    }
-                  />
+                  <div className="absolute w-0 h-[1px] rounded-full top-full left-0 bg-black duration-300 group-hover:w-full" />
                 </li>
               );
             })}
@@ -135,7 +131,7 @@ export const MobileNav = ({ setIsOpen, menuButtonRef }) => {
                 <li
                   key={link.name}
                   style={{ fontWeight: selected ? "600" : "500" }}
-                  className="group relative w-fit"
+                  className="group relative cursor-pointer w-fit"
                   onClick={() => {
                     const element = document.getElementById(link.url);
                     element?.scrollIntoView({
@@ -146,9 +142,7 @@ export const MobileNav = ({ setIsOpen, menuButtonRef }) => {
                 >
                   {link.name}
                   <div
-                    className={
-                      "absolute w-0 h-[1px] rounded-full top-full bg-white group-hover:w-full duration-300  "
-                    }
+                    className="absolute w-0 h-[1px] rounded-full top-full left-0 bg-white duration-300 group-hover:w-full"
                     style={{
                       width: selected ? "100%" : null,
                     }}
